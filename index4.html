@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"/>
+      <style>
+        
+        /*page 1 */
+  
+        .img-bg {
+          background-color: #eef1f6;
+        }
+  
+        .fs-8{
+          font-size:10px
+        }
+  
+        .scale-hover:hover{
+          transform: scale(1.1);
+          transition: transform 0.4s ease;
+        }
+  
+        .img-fluid{
+            filter:opacity(0.5);
+            cursor: pointer;
+          }
+  
+        .img-fluid:hover{
+            filter:opacity(1)
+          }
+  
+  
+        a {
+          color: gray !important;
+        }
+  
+        #a {
+          color: black !important;
+        }
+  
+        #q {
+          color: white !important;
+        }
+  
+        /* Custom styles for background and position */
+        .ratio {
+          position: relative;
+        }
+  
+        .ratio img {
+          object-fit: cover;
+          /* Ensures image covers the area */
+          width: 100%;
+          height: 100%;
+        }
+  
+        .position-relative {
+          position: relative;
+        }
+  
+        .position-absolute {
+          position: absolute;
+        }
+  
+        /*page 3*/
+        .card {
+          border: none;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          height: 500px;
+        }
+  
+        .card img {
+          border-radius: 10px 10px 0 0;
+          position: relative;
+          top: 280px;
+        }
+  
+        .btn-custom {
+          background-color: #000;
+          color: #fff;
+        }
+  
+        .btn-custom:hover {
+          background-color: #333;
+        }
+  
+        .card-body {
+          position: relative;
+          bottom: 100px;
+        }
+  
+        /*page 5 */
+        .property-card {
+          position: relative;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+  
+        .property-card img {
+          width: 100%;
+          height: auto;
+        }
+  
+        .property-info {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          padding: 15px;
+          background: rgba(0, 0, 0, 0.6);
+          color: #fff;
+        }
+  
+        .badge-custom {
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          background: #17a2b8;
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 5px;
+        }
+  
+        .badge-featured {
+          left: 90px;
+          background: #ff7f50;
+        }
+  
+        .price-tag {
+          background: #d9534f;
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 5px;
+        }
+  
+        /* page 6 */
+        .hero-section {
+          background-color: #2f747c;
+          color: #fff;
+          padding: 50px;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: row-reverse;
+          gap: 20px;
+          align-items: center;
+          justify-content: space-between;
+        }
+  
+        .hero-text h1 {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+  
+        .hero-text p {
+          font-size: 1rem;
+          margin: 10px 0;
+        }
+  
+        .btn-start {
+          background-color: #d9534f;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          font-size: 1rem;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+        }
+  
+        .btn-start:hover {
+          background-color: #b52f2a;
+        }
+  
+        .hero-image {
+          max-width: 40%;
+        }
+  
+        .hero-image img {
+          width: 100%;
+        }
+  
+        /*page 5*/
+        .as {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          position: relative;
+          left: 700px;
+          bottom: 650px;
+        }
+  
+        /*page 9*/
+  
+        #mm {
+          position: relative;
+          bottom: 500px;
+        }
+  
+        /* page */
+        .product-slider {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+        }
+  
+        .slider-wrapper {
+          display: flex;
+          transition: transform 0.5s ease;
+        }
+  
+        .product {
+          flex: 0 0 33.33%;
+          padding: 15px;
+          text-align: center;
+        }
+  
+        .product img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
+  
+        .carousel-control-prev,
+        .carousel-control-next {
+          position: absolute;
+          top: 40%;
+          transform: translateY(-50%);
+          z-index: 10;
+        }
+  
+        .carousel-control-prev {
+          left: -15px;
+        }
+  
+        .carousel-control-next {
+          right: -15px;
+        }
+  
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          background-color: #1ec018;
+          width: 30px;
+          height: 30px;
+          border-radius: 5px;
+        }
+  
+        .slider-indicators {
+          text-align: center;
+          margin-top: 10px;
+        }
+  
+        .slider-indicators button {
+          width: 12px;
+          height: 12px;
+          margin: 0 5px;
+          border-radius: 50%;
+          background-color: #ddd;
+          border: none;
+          cursor: pointer;
+        }
+  
+        .slider-indicators button.active {
+          background-color: #1ec018;
+        }
+      </style>
+    </head>
+  
+    <body>
+        <!--page 1-->
+        <!-- الصفحة 1 -->
+
+
+
+
+      
+    <div class="dropdown">
+      <button
+        type="button"
+        class="theme-switcher btn btn-icon btn-outline-secondary fs-lg border-0 animate-scale"
+        data-bs-toggle="dropdown"
+        data-bs-display="dynamic"
+        aria-expanded="false"
+        aria-label="تبديل الوضع (فاتح)"
+      >
+        <span class="theme-icon-active d-flex animate-target">
+          <i class="fi-sun"></i>
+        </span>
+      </button>
+      <ul
+        class="dropdown-menu start-50 translate-middle-x"
+        style="
+          --fn-dropdown-min-width: 9rem;
+          --fn-dropdown-spacer: 0.5rem;
+        "
+      >
+        <li>
+          <button
+            type="button"
+            class="dropdown-item active"
+            data-bs-theme-value="light"
+            aria-pressed="true"
+          >
+            <span class="theme-icon d-flex fs-base me-2">
+              <i class="fi-sun"></i>
+            </span>
+            <span class="theme-label">فاتح</span>
+            <i class="item-active-indicator fi-check ms-auto"></i>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item"
+            data-bs-theme-value="dark"
+            aria-pressed="false"
+          >
+            <span class="theme-icon d-flex fs-base me-2">
+              <i class="fi-moon"></i>
+            </span>
+            <span class="theme-label">داكن</span>
+            <i class="item-active-indicator fi-check ms-auto"></i>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item"
+            data-bs-theme-value="auto"
+            aria-pressed="false"
+          >
+            <span class="theme-icon d-flex fs-base me-2">
+              <i class="fi-auto"></i>
+            </span>
+            <span class="theme-label">تلقائي</span>
+            <i class="item-active-indicator fi-check ms-auto"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  
+    
+    <a
+      class="btn btn-icon btn-outline-secondary fs-lg border-0 animate-shake me-2"
+      href="account-signin.html"
+      aria-label="تسجيل الدخول إلى الحساب"
+    >
+      <i class="fi-user animate-target"></i>
+    </a>
+  
+    
+    <a
+      class="btn btn-danger animate-scale"
+      id="q"
+      href="add-property-type.html"
+    >
+      <i class="fi-plus fs-lg animate-target ms-n2 me-1 me-sm-2"></i>
+      إضافة<span class="d-none d-xl-inline ms-1">خاصية</span>
+    </a>
+  </div>
+  </div>
+  </header>
+  
+  <main class="content-wrapper">
+    
+    <section class="position-relative mt-md-5">
+      <div class="container position-relative z-1 pt-5 pt-md-4 pt-xl-5">
+        <div class="row pt-lg-3 pt-xl-0 pt-xxl-4 pb-4 pb-md-5 pb-xl-0">
+          <div class="col-md-6 col-xxl-5 text-center text-md-start">
+            <h1 class="display-4 pb-sm-1 pb-lg-3">
+              طريقة سهلة للعثور على عقار مثالي
+            </h1>
+            <p class="fs-lg mb-md-0">
+              نحن نقدم خدمة كاملة للبيع أو الشراء أو الإيجار للعقارات.
+            </p>
+          </div>
+        </div>
+        <div
+          class="d-none d-md-block d-lg-none"
+          style="height: 70px"
+        ></div>
+        <div
+          class="d-none d-lg-block d-xl-none"
+          style="height: 130px"
+        ></div>
+        <div
+          class="d-none d-xl-block"
+          style="height: 220px"
+        ></div>
+         
+<div class="row pb-5 pb-md-0">
+    <div class="col-xl-10 col-xxl-9">
+      <form
+        class="bg-body border rounded-4 p-2"
+        id="searchForm"
+      >
+        <div class="row g-0 p-1">
+          <div class="col-lg-7">
+            <div class="row g-0">
+              <div class="col-6 col-md-4 d-flex">
+                <div class="w-100">
+                  <select
+                    class="form-select form-select-lg border-0 ps-3"
+                    id="1"
+                    data-select='{
+                        "classNames": {
+                          "containerInner": ["form-select", "form-select-lg", "border-0", "ps-3"]
+                        },
+                        "removeItemButton": false
+                      }'
+                    aria-label="اختيار إيجار أو بيع"
+                    required=""
+                  >
+                    <option value="للايجار">للايجار</option>
+                    <option value="للبيع">للبيع</option>
+                  </select>
+                </div>
+                <hr class="vr m-0" />
+              </div>
+              <div class="col-6 col-md-4 d-flex">
+                <div class="w-100">
+                  <select
+                    class="form-select form-select-lg border-0"
+                    id="2"
+                    data-select='{
+                        "classNames": {
+                          "containerInner": ["form-select", "form-select-lg", "border-0"]
+                        },
+                        "searchEnabled": true
+                      }'
+                    aria-label="اختيار الموقع"
+                    required=""
+                  >
+                    <option value="">الموقع</option>
+                    <option value="نيويورك">نيويورك</option>
+                    <option value="لوس أنجلوس">لوس أنجلوس</option>
+                    <option value="شيكاغو">شيكاغو</option>
+                    <option value="هيوستن">هيوستن</option>
+                    <option value="فينيكس">فينيكس</option>
+                    <option value="فيلادلفيا">فيلادلفيا</option>
+                    <option value="سان أنطونيو">سان أنطونيو</option>
+                    <option value="سان دييغو">سان دييغو</option>
+                    <option value="دالاس">دالاس</option>
+                    <option value="سان خوسيه">سان خوسيه</option>
+                  </select>
+                </div>
+                <hr class="vr d-none d-md-block m-0" />
+              </div>
+              <div class="col-md-4 d-flex">
+                <div class="w-100">
+                  <hr class="d-md-none my-2" />
+                  <select
+                    class="form-select form-select-lg border-0 ps-3"
+                    id="3"
+                    data-select='{
+                        "classNames": {
+                          "containerInner": ["form-select", "form-select-lg", "border-0", "ps-3"]
+                        },
+                        "removeItemButton": false
+                      }'
+                    aria-label="اختيار نوع العقار"
+                    required=""
+                  >
+                    <option value="">نوع العقار</option>
+                    <option value="منازل">منازل</option>
+                    <option value="شقق">شقق</option>
+                    <option value="تجاري">تجاري</option>
+                    <option value="إيجار يومي">إيجار يومي</option>
+                    <option value="مكاتب">مكاتب</option>
+                    <option value="منازل توأمية">منازل توأمية</option>
+                  </select>
+                </div>
+                <hr class="vr d-none d-lg-block m-0" />
+              </div>
+            </div>
+          </div>
+          <hr class="d-lg-none mt-2 mb-0" />
+          <div
+            class="col-lg-5 d-flex flex-column flex-sm-row align-items-sm-center gap-2 gap-sm-3 pt-3 pt-lg-0 ps-lg-3"
+          >
+            <div
+              class="d-flex align-items-center w-100 gap-2 ps-2 ps-lg-0"
+            >
+              السعر
+              <div
+                class="range-slider w-100"
+                data-range-slider='{"startMin": 2000, "min": 500, "max": 4000, "step": 100, "tooltipPrefix": "$"}'
+              >
+                <div class="range-slider-ui my-4"></div>
+                <input
+                  type="hidden"
+                  class="form-control"
+                  data-range-slider-min=""
+                />
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-lg btn-danger"
+            >
+              بحث
+              <i class="fi-search fs-lg ms-2 me-n1"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div
+    class="d-none d-md-block d-lg-none"
+    style="height: 60px"
+  ></div>
+  <div
+    class="d-none d-lg-block d-xxl-none"
+    style="height: 90px"
+  ></div>
+  <div
+    class="d-none d-xxl-block"
+    style="height: 130px"
+  ></div>
+  </div>
+  
+  <section>
+    <div class="container">
+      <div class="row">
+        
+        <div
+          class="col-md-6"
+          style="width: 768px"
+        >
+          <div
+            class="d-xl-none"
+            style="height: 295px"
+          ></div>
+          <div
+            class="d-none d-xl-block d-xxl-none"
+            style="height: 326px"
+          ></div>
+          <div
+            class="d-none d-xxl-block"
+            style="height: 366px"
+          ></div>
+          <div class="position-relative overflow-hidden">
+            <div
+              class="position-absolute top-0 z-1 fw-bold"
+              style="
+                right: 0;
+                margin: -75px 96px 0 0;
+                font-size: 128px;
+                color: var(--fn-body-bg);
+              "
+            >
+              شراء
+            </div>
+            <div
+              class="ratio bg-body-tertiary rounded overflow-hidden"
+              style="--fn-aspect-ratio: calc(328 / 768 * 100%)"
+            >
+              <img
+                src="images/01_1.jpg"
+                alt="صورة توضيحية"
+                class="w-100 h-100"
+              />
+            </div>
+          </div>
+        </div>
+          
+<div
+class="col-md-4"
+style="width: 306px"
+>
+<div class="position-relative overflow-hidden">
+  <div
+    class="position-absolute top-0 z-1 fw-bold"
+    style="
+      left: 0;
+      margin: -10px 0 0 -69px;
+      font-size: 128px;
+      color: var(--fn-body-bg);
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(-180deg);
+    "
+  >
+    بيع
+  </div>
+  <div
+    class="ratio bg-info rounded overflow-hidden"
+    style="--fn-aspect-ratio: calc(443 / 306 * 100%)"
+  >
+    <img
+      src="images/02.png"
+      alt="صورة توضيحية"
+      class="w-100 h-100"
+    />
+  </div>
+</div>
+</div>
+
+
+<div
+class="col-md-6"
+style="width: 438px"
+>
+<div style="height: 117px"></div>
+<div class="position-relative overflow-hidden">
+  <div
+    class="position-absolute top-0 z-1 fw-bold"
+    style="
+      left: 0;
+      margin: -73px 0 0 -18px;
+      font-size: 128px;
+      color: var(--fn-body-bg);
+    "
+  >
+    إيجار
+  </div>
+  <div
+    class="ratio bg-body-tertiary rounded overflow-hidden"
+    style="--fn-aspect-ratio: calc(446 / 438 * 100%)"
+  >
+    <img
+      src="images/03_1.jpg"
+      alt="صورة"
+      class="w-100 h-100"
+    />
+  </div>
+</div>
+</div> 
+
+        <!-- page 2-->
+         <!-- Categories -->
+      <section class="container pt-2 pt-sm-3 pt-md-4 pt-lg-5 my-xxl-3">
+        <div class="py-5">
+          <div class="border rounded py-3 py-xl-4">
+            <div class="row row-cols-2 row-cols-md-3 row-cols-xl-6 g-0 py-2">
+              <div class="col d-flex position-relative py-2">
+                <div class="vstack align-items-center text-center py-2 px-3">
+                  <h3 class="h5 mb-2">
+                    <a
+                      class="hover-effect-underline stretched-link"
+                      href="listings-real-estate.html"
+                      >منازل</a
+                    >
+                  </h3>
+                  <div class="d-flex align-items-center gap-1 fs-sm">
+                    <i class="fi-bookmark fs-base"></i>
+                    6.4K offers
+                  </div>
+                </div>
+                <hr class="vr m-0" />
+              </div>
+              <div class="col d-flex position-relative py-2">
+                <div class="vstack align-items-center text-center py-2 px-3">
+                  <h3 class="h5 mb-2">
+                    <a
+                      class="hover-effect-underline stretched-link"
+                      href="listings-real-estate.html"
+                      >شقق</a
+                    >
+                  </h3>
+                  <div class="d-flex align-items-center gap-1 fs-sm">
+                    <i class="fi-bookmark fs-base"></i>
+                    12.8K offers
+                  </div>
+                </div>
+                <hr class="vr d-none d-md-block m-0" />
+              </div>
+              <div class="col d-flex position-relative py-2">
+                <div class="vstack align-items-center text-center py-2 px-3">
+                  <h3 class="h5 mb-2">
+                    <a
+                      class="hover-effect-underline stretched-link"
+                      href="listings-real-estate.html"
+                      >عقارات</a
+                    >
+                  </h3>
+                  <div class="d-flex align-items-center gap-1 fs-sm">
+                    <i class="fi-bookmark fs-base"></i>
+                    9.3K offers
+                  </div>
+                </div>
+                <hr class="vr d-md-none d-xl-block m-0" />
+              </div>
+              <div class="col d-flex position-relative py-2">
+                <div class="vstack align-items-center text-center py-2 px-3">
+                  <h3 class="h5 mb-2">
+                    <a
+                      class="hover-effect-underline stretched-link"
+                      href="listings-real-estate.html"
+                      >ايجار يومي </a
+                    >
+                  </h3>
+                  <div class="d-flex align-items-center gap-1 fs-sm">
+                    <i class="fi-bookmark fs-base"></i>
+                    42.4K offers
+                  </div>
+                </div>
+                <hr class="vr d-none d-md-block m-0" />
+              </div>
+              <div class="col d-flex position-relative py-2">
+                <div class="vstack align-items-center text-center py-2 px-3">
+                  <h3 class="h5 mb-2">
+                    <a
+                      class="hover-effect-underline stretched-link"
+                      href="listings-real-estate.html"
+                      >مباني جديده </a
+                    >
+                  </h3>
+                  <div class="d-flex align-items-center gap-1 fs-sm">
+                    <i class="fi-bookmark fs-base"></i>
+                    22.5K offers
+                  </div>
+                </div>
+                <hr class="vr m-0" />
+              </div>
+              <div class="col d-flex position-relative py-2">
+                <div
+                  class="vstack dropdown align-items-center text-center py-2 px-3"
+                  data-bs-toggle="dropdown"
+                  data-bs-display="static"
+                >
+                  <h3 class="h5 mb-2">
+                    <a
+                      class="hover-effect-underline stretched-link"
+                      href="#"
+                      >المزيد</a
+                    >
+                  </h3>
+                  <div
+                    class="d-flex align-items-center fs-sm text-body-emphasis"
+                  >
+                    <i class="fi-chevron-down fs-xl"></i>
+                  </div>
+                  <ul
+                    class="dropdown-menu top-100 start-50 translate-middle-x"
+                    style="--fn-dropdown-min-width: 11rem"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        >Offices</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        >Warehouses</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        >Retail spaces</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        >Townhouses</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        >Vacation homes</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+        <!-- page 3 -->
+<div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+        <div class="card text-center" style="background-color: #fcefee">
+          <img
+            src="images/home 1.png"
+            class="card-img-top"
+            alt="صورة شراء عقار"
+          />
+          <div class="card-body" id="aa">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              class="bi bi-house-door"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"
+              />
+            </svg>
+            <h5 class="card-title">شراء عقار</h5>
+            <button class="btn btn-custom">ابحث عن منزل</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card text-center" style="background-color: #e1f3f0">
+          <img
+            src="images/home 2.png"
+            class="card-img-top"
+            alt="صورة بيع عقار"
+          />
+          <div class="card-body">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              class="bi bi-bag"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+              />
+            </svg>
+            <h5 class="card-title">بيع عقار</h5>
+            <button class="btn btn-custom">وضع إعلان</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card text-center" style="background-color: #fbf6ed">
+          <img
+            src="images/home3.png"
+            class="card-img-top"
+            alt="صورة تأجير عقار"
+          />
+          <div class="card-body">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              class="bi bi-bag"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+              />
+            </svg>
+            <h5 class="card-title">تأجير عقار</h5>
+            <button class="btn btn-custom">ابحث عن إيجار</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+         <!-- page 4 -->
+<div class="container my-5">
+    <div class="product-slider">
+      <div class="slider-wrapper">
+        <!-- المنتج 1 -->
+        <div class="product">
+          <img
+            src="images/11.jpg"
+            alt="صورة المنتج 1"
+          />
+        </div>
+        <!-- المنتج 2 -->
+        <div class="product active">
+          <img
+            src="images/12.jpg"
+            alt="صورة المنتج 2"
+          />
+        </div>
+        <!-- المنتج 3 -->
+        <div class="product">
+          <img
+            src="images/13.jpg"
+            alt="صورة المنتج 3"
+          />
+        </div>
+        <!-- المنتج 4 -->
+        <div class="product">
+          <img
+            src="images/14.jpg"
+            alt="صورة المنتج 4"
+          />
+        </div>
+        <!-- المنتج 5 -->
+        <div class="product">
+          <img
+            src="images/15.jpg"
+            alt="صورة المنتج 5"
+          />
+        </div>
+        <!-- المنتج 6 -->
+        <div class="product">
+          <img
+            src="images/11.jpg"
+            alt="صورة المنتج 6"
+          />
+        </div>
+      </div>
+  
+      <!-- أزرار التحكم في المعرض -->
+      <button
+        class="carousel-control-prev"
+        id="prevBtn"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        id="nextBtn"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+  
+      <!-- مؤشرات المعرض -->
+      <div class="slider-indicators">
+        <button></button>
+        <button class="active"></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
+    </div>
+  </div>
+      
+        <!--page 5-->
+        <section class="py-5 bg-light" dir="rtl">
+            <div class="container">
+              <div class="d-flex justify-content-between mb-4">
+                <h2>تمت إضافتها اليوم</h2>
+              </div>
+              <div class="d-flex gap-2">
+                <!-- البطاقة الأولى -->
+                <div class="w-50">
+                  <div class="property-card">
+                    <img
+                      src="images/ch1.jpg"
+                      alt="صورة العقار"
+                    />
+                    <span class="badge-custom">موثوق</span>
+                    <span class="badge-custom badge-featured">مميزة</span>
+                    <div class="property-info">
+                      <h5>شقة 3 غرف | 127 متر مربع</h5>
+                      <p>3811 شارع ديتمارز، أستوريا، نيويورك 11105</p>
+                      <span class="price-tag">ابتداءً من $3,850</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-50 d-flex flex-column gap-4">
+                  <!-- البطاقة الثانية -->
+                  <div class="col-md-6 w-100">
+                    <div class="property-card">
+                      <img
+                        src="images/chair 3.jpg"
+                        alt="صورة العقار"
+                      />
+                      <span class="badge-custom badge-featured">مميزة</span>
+                      <div class="property-info">
+                        <h5>شقة 2 غرفة | 78 متر مربع</h5>
+                        <p>40 شارع 9 الجنوبي، بروكلين، نيويورك 11249</p>
+                        <span class="price-tag">ابتداءً من $2,600</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- البطاقة الثالثة -->
+                  <div class="col-md-6 w-100">
+                    <div class="property-card">
+                      <img
+                        src="images/ch2.jpg"
+                        alt="صورة العقار"
+                      />
+                      <span class="badge-custom badge-featured">مميزة</span>
+                      <div class="property-info">
+                        <h5>شقة غرفة واحدة | 52 متر مربع</h5>
+                        <p>444 بارك أفينيو، بروكلين، نيويورك 11205</p>
+                        <span class="price-tag">ابتداءً من $1,750</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+        <!-- page 6-->
+        <section class="container py-5" dir="rtl">
+            <div class="hero-section">
+              <div class="hero-text">
+                <h1>احسب تكلفة عقارك</h1>
+                <p>
+                  تقييم العقارات هو إجراء يتيح لك تحديد القيمة السوقية المتوسطة للعقار (شقة، منزل، أرض، إلخ).
+                </p>
+                <button class="btn btn-start">ابدأ الآن</button>
+              </div>
+              <div class="hero-image">
+                <img
+                  src="images/building.png"
+                  alt="صورة مبنى"
+                />
+              </div>
+            </div>
+          </section>
+          
+        <!-- page 7 -->
+       
+        <!-- page 8-->
+        <section class="bg-light p-5 text-center my-5" dir="rtl">
+            <h2 class="mb-4">شركاؤنا</h2>
+            <div class="row justify-content-center">
+              <div class="col-4 col-md-2">
+                <img
+                  src="images/download (8).svg"
+                  alt="شعار شريك"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-4 col-md-2">
+                <img
+                  src="images/download (7).svg"
+                  alt="شعار شريك"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-4 col-md-2">
+                <img
+                  src="images/download (6).svg"
+                  alt="شعار شريك"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-4 col-md-2">
+                <img
+                  src="images/download (5).svg"
+                  alt="شعار شريك"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-4 col-md-2">
+                <img
+                  src="images/download (4).svg"
+                  alt="شعار شريك"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </section>
+          
+         <!-- page 9-->
+         <section class="container my-5 text-center" dir="rtl">
+            <h1 class="mb-5">أفضل وكلاء العقارات</h1>
+            <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
+              <!-- الوكيل 1 -->
+              <div class="col">
+                <div class="mb-4 fw-bold">
+                  <img
+                    src="images/1.png"
+                    alt="صورة الوكيل"
+                    class="rounded-circle mx-auto img-bg"
+                    width="150"
+                    height="150"
+                  />
+                </div>
+                <div>
+                  <h5 class="mb-1">آيفي تايلور</h5>
+                  <p class="fw-light mb-3">وكيل مجموعة إمبريال للعقارات</p>
+                  <div class="d-flex gap-2 justify-content-center">
+                    <a href="#" class="text-dark me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+              <!-- الوكيل 2 -->
+              <div class="col">
+                <div class="mb-4 fw-bold">
+                  <img
+                    src="images/2.png"
+                    alt="صورة الوكيل"
+                    class="rounded-circle mx-auto img-bg"
+                    width="150"
+                    height="150"
+                  />
+                </div>
+                <div>
+                  <h5 class="mb-1">فلويد مايلز</h5>
+                  <p class="fw-light mb-3">وكيل مجموعة إمبريال للعقارات</p>
+                  <div class="d-flex gap-2 justify-content-center">
+                    <a href="#" class="text-dark me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+              <!-- الوكيل 3 -->
+              <div class="col">
+                <div class="mb-4 fw-bold">
+                  <img
+                    src="images/3.png"
+                    alt="صورة الوكيل"
+                    class="rounded-circle mx-auto img-bg"
+                    width="150"
+                    height="150"
+                  />
+                </div>
+                <div>
+                  <h5 class="mb-1">أدريان فريدريك</h5>
+                  <p class="fw-light mb-3">وكيل مجموعة إمبريال للعقارات</p>
+                  <div class="d-flex gap-2 justify-content-center">
+                    <a href="#" class="text-dark me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+              <!-- الوكيل 4 -->
+              <div class="col">
+                <div class="mb-4 fw-bold">
+                  <img
+                    src="images/4.png"
+                    alt="صورة الوكيل"
+                    class="rounded-circle mx-auto img-bg"
+                    width="150"
+                    height="150"
+                  />
+                </div>
+                <div>
+                  <h5 class="mb-1">هيو بليك</h5>
+                  <p class="fw-light mb-3">وكيل مجموعة إمبريال للعقارات</p>
+                  <div class="d-flex gap-2 justify-content-center">
+                    <a href="#" class="text-dark me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+      <!--page 10-->
+      <!-- قسم أحدث المدونات -->
+      <section class="container my-5" dir="rtl">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="h1">أحدث المدونات</h2>
+            <a href="#" class="text-decoration-none">عرض الكل &larr;</a>
+          </div>
+          <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4">
+            <!-- بطاقة المدونة 1 -->
+            <div class="col">
+              <div class="overflow-hidden w-100 mb-3 rounded" style="height: 300px;">
+                <img
+                  src="images/chair1.jpg"
+                  class="w-100 h-100 scale-hover"
+                  alt="صورة المدونة"
+                />
+              </div>
+              <div class="col g-3">
+                <p class="text-uppercase fw-bold fs-8 text-muted small">
+                  نصائح للإيجار
+                </p>
+                <h5>ما الذي تحتاج إلى معرفته عند استئجار شقة</h5>
+                <p class="card-text">
+                  من الصعب العثور على شقة جيدة للإيجار طويل الأمد في المدن الكبرى. بالإضافة إلى ذلك، قد يواجه المستأجرون المحتملون بعض المشاكل...
+                </p>
+                <div class="d-flex gap-4 text-muted small">
+                  <span class="fw-bold">بواسطة كودي فيشر</span>
+                  <span>9 يوليو 2024</span>
+                </div>
+              </div>
+            </div>
+            <!-- بطاقة المدونة 2 -->
+            <div class="col">
+              <div class="overflow-hidden w-100 mb-3 rounded" style="height: 300px;">
+                <img
+                  src="images/chair 2.jpg"
+                  class="w-100 h-100 scale-hover"
+                  alt="صورة المدونة"
+                />
+              </div>
+              <div class="col g-3">
+                <p class="text-uppercase fw-bold fs-8 text-muted small">
+                  نصائح للإيجار
+                </p>
+                <h5>ما الذي تحتاج إلى معرفته عند استئجار شقة</h5>
+                <p class="card-text">
+                  من الصعب العثور على شقة جيدة للإيجار طويل الأمد في المدن الكبرى. بالإضافة إلى ذلك، قد يواجه المستأجرون المحتملون بعض المشاكل...
+                </p>
+                <div class="d-flex gap-4 text-muted small">
+                  <span class="fw-bold">بواسطة كودي فيشر</span>
+                  <span>9 يوليو 2024</span>
+                </div>
+              </div>
+            </div>
+            <!-- بطاقة المدونة 3 -->
+            <div class="col">
+              <div class="overflow-hidden w-100 mb-3 rounded" style="height: 300px;">
+                <img
+                  src="images/chair 3.jpg"
+                  class="w-100 h-100 scale-hover"
+                  alt="صورة المدونة"
+                />
+              </div>
+              <div class="col g-3">
+                <p class="text-uppercase fw-bold fs-8 text-muted small">
+                  نصائح للإيجار
+                </p>
+                <h5>ما الذي تحتاج إلى معرفته عند استئجار شقة</h5>
+                <p class="card-text">
+                  من الصعب العثور على شقة جيدة للإيجار طويل الأمد في المدن الكبرى. بالإضافة إلى ذلك، قد يواجه المستأجرون المحتملون بعض المشاكل...
+                </p>
+                <div class="d-flex gap-4 text-muted small">
+                  <span class="fw-bold">بواسطة كودي فيشر</span>
+                  <span>9 يوليو 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+       <!--page 11-->
+      <footer class="bg-dark text-light py-5" dir="rtl">
+        <div class="container">
+          <div class="row">
+            <!-- قسم التواصل -->
+            <div class="col-md-3">
+              <h5 class="mb-3">فايندر</h5>
+              <p><i class="bi bi-envelope"></i> contact@example.com</p>
+              <p><i class="bi bi-telephone"></i> +1 50 537 53 082</p>
+            </div>
+      
+            <!-- الروابط السريعة -->
+            <div class="col-md-3">
+              <h5 class="mb-3">روابط سريعة</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-light text-decoration-none">تأجير يومي</a>
+                </li>
+                <li>
+                  <a href="#" class="text-light text-decoration-none">تأجير طويل الأمد</a>
+                </li>
+                <li>
+                  <a href="#" class="text-light text-decoration-none">شراء عقار</a>
+                </li>
+                <li>
+                  <a href="#" class="text-light text-decoration-none">بيع عقار</a>
+                </li>
+                <li>
+                  <a href="#" class="text-light text-decoration-none">العروض المميزة</a>
+                </li>
+              </ul>
+            </div>
+      
+            <!-- الملف الشخصي -->
+            <div class="col-md-3">
+              <h5 class="mb-3">الملف الشخصي</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-light text-decoration-none">حسابي</a>
+                </li>
+                <li>
+                  <a href="#" class="text-light text-decoration-none">قوائمي</a>
+                </li>
+                <li>
+                  <a href="#" class="text-light text-decoration-none">إضافة قائمة</a>
+                </li>
+                <li>
+                  <a href="#" class="text-light text-decoration-none">مركز المساعدة</a>
+                </li>
+                <li>
+                  <a href="#" class="text-light text-decoration-none">سياسة الخصوصية</a>
+                </li>
+              </ul>
+            </div>
+      
+            <!-- قسم تحميل التطبيق -->
+            <div class="col-md-3">
+              <h5 class="mb-3">حمّل تطبيق فايندر</h5>
+              <p>
+                اكتشف كل ما تحتاجه لشراء، بيع، واستئجار العقارات في تطبيق فايندر الجديد!
+              </p>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-light">
+                  <i class="bi bi-apple"></i> متجر آبل
+                </a>
+                <a href="#" class="btn btn-light">
+                  <i class="bi bi-google-play"></i> متجر جوجل
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- الصف السفلي -->
+          <div class="row mt-4">
+            <div class="col text-center">
+              <a href="#" class="text-light mx-2">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="text-light mx-2">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="text-light mx-2">
+                <i class="bi bi-x"></i>
+              </a>
+            </div>
+          </div>
+      
+          <div class="row mt-3">
+            <div class="col text-center">
+              <p class="mb-0">© جميع الحقوق محفوظة. تم الإنشاء بواسطة Createx Studio</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script> -->
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+        rel="stylesheet"
+      />
+  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+  const swiper = new Swiper()
+</script>
+    </main>
+  </body>
+</html>
